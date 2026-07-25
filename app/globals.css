@@ -111,3 +111,51 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* NexoBazar Logo Animations */
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 0px rgba(0, 102, 255, 0));
+  }
+  50% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 12px rgba(0, 102, 255, 0.4));
+  }
+}
+
+@keyframes logo-bounce {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(2px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+}
+
+@layer utilities {
+  .animate-logo-float {
+    animation: logo-float 3s ease-in-out infinite;
+  }
+
+  .animate-logo-pulse {
+    animation: logo-pulse 2.5s ease-in-out infinite;
+  }
+
+  .animate-logo-bounce {
+    animation: logo-bounce 2s ease-in-out infinite;
+    transform-origin: 62px 50px;
+  }
+}

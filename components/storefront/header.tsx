@@ -26,6 +26,7 @@ import { CATEGORIES } from '@/lib/types'
 import { cn } from '@/lib/utils'
 import { CartSheet } from './cart-sheet'
 import { SearchDialog } from './search-dialog'
+import { NexoBazarLogo } from '@/components/nexobazar-logo'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -93,9 +94,9 @@ export function Header() {
             </Button>
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0">
-              <img src="/nexobazar-logo.png" alt="NexoBazar" className="h-8 w-auto" />
-              <span className="font-bold text-xl hidden sm:block">NexoBazar</span>
+            <Link href="/" className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity">
+              <NexoBazarLogo className="h-8 w-auto" />
+              <span className="font-bold text-xl hidden sm:block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">NexoBazar</span>
             </Link>
 
             {/* Search bar - desktop */}
@@ -229,9 +230,9 @@ export function Header() {
         <SheetContent side="left" className="w-80 p-0">
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-4 border-b border-border">
-              <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <img src="/nexobazar-logo.png" alt="NexoBazar" className="h-8 w-auto" />
-                <span className="font-bold text-xl">NexoBazar</span>
+              <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity" onClick={() => setMobileMenuOpen(false)}>
+                <NexoBazarLogo className="h-8 w-auto" />
+                <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">NexoBazar</span>
               </Link>
             </div>
             

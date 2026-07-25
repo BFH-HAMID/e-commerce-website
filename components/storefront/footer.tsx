@@ -3,6 +3,7 @@ import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from 'luci
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { CATEGORIES } from '@/lib/types'
+import { NexoBazarLogo } from '@/components/nexobazar-logo'
 
 export function Footer() {
   return (
@@ -34,9 +35,9 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <img src="/nexobazar-logo.png" alt="NexoBazar" className="h-8 w-auto" />
-              <span className="font-bold text-xl">NexoBazar</span>
+            <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
+              <NexoBazarLogo className="h-8 w-auto" />
+              <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">NexoBazar</span>
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
               Your premium online marketplace for quality products with fast delivery. Shop electronics, fashion, home & more with excellent customer service.
