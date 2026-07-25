@@ -8,11 +8,11 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'ShopBD - Premium Online Shopping in Bangladesh',
-    template: '%s | ShopBD',
+    default: 'NexoBazar - Premium Online Marketplace',
+    template: '%s | NexoBazar',
   },
-  description: 'Discover premium products with fast delivery across Bangladesh. Shop electronics, fashion, home & more with Cash on Delivery.',
-  keywords: ['online shopping', 'bangladesh', 'ecommerce', 'cash on delivery', 'electronics', 'fashion'],
+  description: 'Discover premium products with fast delivery. Shop electronics, fashion, home & more at NexoBazar - your trusted online marketplace.',
+  keywords: ['online shopping', 'marketplace', 'ecommerce', 'electronics', 'fashion', 'home'],
   icons: {
     icon: [
       {

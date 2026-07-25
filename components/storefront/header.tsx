@@ -94,10 +94,8 @@ export function Header() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">S</span>
-              </div>
-              <span className="font-bold text-xl hidden sm:block">ShopBD</span>
+              <img src="/nexobazar-logo.png" alt="NexoBazar" className="h-8 w-auto" />
+              <span className="font-bold text-xl hidden sm:block">NexoBazar</span>
             </Link>
 
             {/* Search bar - desktop */}
@@ -232,10 +230,8 @@ export function Header() {
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-4 border-b border-border">
               <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">S</span>
-                </div>
-                <span className="font-bold text-xl">ShopBD</span>
+                <img src="/nexobazar-logo.png" alt="NexoBazar" className="h-8 w-auto" />
+                <span className="font-bold text-xl">NexoBazar</span>
               </Link>
             </div>
             

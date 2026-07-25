@@ -35,13 +35,11 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">S</span>
-              </div>
-              <span className="font-bold text-xl">ShopBD</span>
+              <img src="/nexobazar-logo.png" alt="NexoBazar" className="h-8 w-auto" />
+              <span className="font-bold text-xl">NexoBazar</span>
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
-              Your premium online shopping destination in Bangladesh. Quality products, fast delivery, and excellent customer service.
+              Your premium online marketplace for quality products with fast delivery. Shop electronics, fashion, home & more with excellent customer service.
             </p>
             <div className="flex items-center gap-3">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -110,7 +108,7 @@ export function Footer() {
 
           {/* About */}
           <div>
-            <h4 className="font-semibold mb-4">About ShopBD</h4>
+            <h4 className="font-semibold mb-4">About NexoBazar</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -150,9 +148,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:support@shopbd.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:support@nexobazar.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                   <Mail className="h-4 w-4" />
-                  <span>support@shopbd.com</span>
+                  <span>support@nexobazar.com</span>
                 </a>
               </li>
             </ul>
@@ -165,7 +163,7 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} ShopBD. All rights reserved.
+              &copy; {new Date().getFullYear()} NexoBazar. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <span className="text-sm text-muted-foreground">We accept:</span>
