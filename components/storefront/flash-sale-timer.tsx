@@ -11,9 +11,17 @@ interface FlashSaleTimerProps {
 }
 
 export function FlashSaleTimer({ endDate, compact = false }: FlashSaleTimerProps) {
-  const [timeLeft, setTimeLeft] = useState(getTimeRemaining(endDate))
+  const [timeLeft, setTimeLeft] = useState<ReturnType<typeof getTimeRemaining> | null>(null)
+  const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {
+    setIsHydrated(true)
+    setTimeLeft(getTimeRemaining(endDate))
+  }, [endDate])
+
+  useEffect(() => {
+    if (!isHydrated) return
+
     const timer = setInterval(() => {
       const remaining = getTimeRemaining(endDate)
       setTimeLeft(remaining)
@@ -24,16 +32,16 @@ export function FlashSaleTimer({ endDate, compact = false }: FlashSaleTimerProps
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [endDate])
+  }, [endDate, isHydrated])
 
-  if (!timeLeft) {
+  if (!isHydrated || !timeLeft) {
     return (
       <div className={cn(
         "flex items-center gap-1 text-muted-foreground",
         compact ? "text-xs" : "text-sm"
       )}>
         <Clock className={compact ? "h-3 w-3" : "h-4 w-4"} />
-        <span>Sale ended</span>
+        <span>{isHydrated ? "Sale ended" : "—"}</span>
       </div>
     )
   }
