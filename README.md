@@ -10,19 +10,23 @@ This repository is linked to a [v0](https://v0.app) project. You can continue de
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+corepack enable
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The storefront home page is in `app/(storefront)/page.tsx`.
+
+## Deploying to Vercel
+
+Import this repository as a **Next.js** project with the repository root (`./`) as the Root Directory. Use Node.js **22.x** and leave the Output Directory unset (Next.js is detected automatically). The repository uses pnpm 10 and `pnpm-lock.yaml`. Vercel should auto-detect the build settings; if you have custom overrides, set the Install Command to `pnpm install --frozen-lockfile` and the Build Command to `pnpm build`. Locally, run `corepack enable` before running pnpm.
+
+No environment variables are needed for the current demo storefront. Cart, wishlist, and orders use browser storage, not a server-side database. Merge changes to `main` to trigger the production deployment linked to this repository. If a Vercel build still fails, check that the Vercel project's Root Directory, Framework Preset, and Node.js version match the settings above and inspect its build logs.
 
 ## Learn More
 

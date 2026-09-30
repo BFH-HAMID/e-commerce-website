@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { Filter, SlidersHorizontal, Grid3X3, LayoutList, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -31,7 +31,7 @@ import Fuse from 'fuse.js'
 
 type SortOption = 'newest' | 'price-asc' | 'price-desc' | 'popular' | 'rating'
 
-export default function ProductsPage() {
+function ProductsContent() {
   const searchParams = useSearchParams()
   
   // URL params
@@ -385,5 +385,13 @@ export default function ProductsPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-16">Loading products...</div>}>
+      <ProductsContent />
+    </Suspense>
   )
 }
